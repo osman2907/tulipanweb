@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torre Tulipán - Problemáticas Residenciales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="brand-icon">🌷</span>
+      <div>
+        <span class="brand-name">Torre Tulipán</span>
+        <span class="brand-sub">Conjunto Las Flores</span>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#problematicas" class="nav-link">Problemáticas</a></li>
+      <li><a href="#morosos" class="nav-link">Morosos</a></li>
+      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Transparencia y Comunidad</p>
+    <h1 class="hero-title">Torre Tulipán</h1>
+    <p class="hero-subtitle">Conjunto Residencial Las Flores</p>
+    <p class="hero-desc">Espacio informativo sobre las problemáticas de nuestra torre, del conjunto y de la comunidad con Las Brisas. Juntos construimos soluciones.</p>
+    <div class="hero-badges">
+      <span class="badge badge-tulipan">Torre Tulipán</span>
+      <span class="badge badge-flores">Las Flores</span>
+      <span class="badge badge-brisas">Las Brisas</span>
+    </div>
+    <a href="#problematicas" class="btn-hero">Ver Problemáticas</a>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Desplázate</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="stats-container">
+    <div class="stat-item">
+      <span class="stat-number" id="countIssues">0</span>
+      <span class="stat-label">Problemáticas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="countMorosos">0</span>
+      <span class="stat-label">Morosos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="countProyectos">0</span>
+      <span class="stat-label">Proyectos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Torres</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMÁTICAS -->
+<section class="section" id="problematicas">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Situación Actual</p>
+      <h2 class="section-title">Problemáticas Reportadas</h2>
+      <p class="section-desc">Filtra por alcance para ver las problemáticas de cada área de nuestra comunidad.</p>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="tulipan">Torre Tulipán</button>
+      <button class="filter-btn" data-filter="flores">Conjunto Las Flores</button>
+      <button class="filter-btn" data-filter="brisas">Con Las Brisas</button>
+    </div>
+
+    <!-- ISSUES GRID -->
+    <div class="issues-grid" id="issuesGrid"></div>
+  </div>
+</section>
+
+<!-- MOROSOS -->
+<section class="section section-alt" id="morosos">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Transparencia Financiera</p>
+      <h2 class="section-title">Registro de Morosos</h2>
+      <p class="section-desc">Lista de propietarios o residentes con obligaciones pendientes de pago de administración.</p>
+    </div>
+    <div class="morosos-info-bar">
+      <div class="info-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        La información se publica con fines de transparencia comunitaria conforme al reglamento interno.
+      </div>
+    </div>
+    <div class="morosos-table-wrap">
+      <table class="morosos-table" id="morososTable">
+        <thead>
+          <tr>
+            <th>Apto / Unidad</th>
+            <th>Torre</th>
+            <th>Meses en mora</th>
+            <th>Valor aprox.</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="morososBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="section" id="proyectos">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Mejoras y Futuro</p>
+      <h2 class="section-title">Propuestas de Proyectos</h2>
+      <p class="section-desc">Iniciativas para mejorar la calidad de vida en nuestra comunidad.</p>
+    </div>
+    <div class="proyectos-grid" id="proyectosGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section section-alt" id="contacto">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Participación Ciudadana</p>
+      <h2 class="section-title">Reporta una Problemática</h2>
+      <p class="section-desc">¿Detectaste un problema que no está aquí? Repórtalo para que la comunidad esté informada.</p>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fNombre">Tu nombre</label>
+          <input type="text" id="fNombre" placeholder="Nombre y apellido">
+        </div>
+        <div class="form-group">
+          <label for="fApto">Apartamento</label>
+          <input type="text" id="fApto" placeholder="Ej: 301">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fTorre">Torre</label>
+          <select id="fTorre">
+            <option value="">Seleccionar...</option>
+            <option value="tulipan">Tulipán</option>
+            <option value="amapola">Amapola</option>
+            <option value="gardenia">Gardenia</option>
+            <option value="brisas">Las Brisas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fAlcance">Alcance</label>
+          <select id="fAlcance">
+            <option value="">Seleccionar...</option>
+            <option value="tulipan">Solo Tulipán</option>
+            <option value="flores">Todo Las Flores</option>
+            <option value="brisas">Con Las Brisas</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label for="fTitulo">Título de la problemática</label>
+        <input type="text" id="fTitulo" placeholder="Describe brevemente el problema">
+      </div>
+      <div class="form-group full">
+        <label for="fDescripcion">Descripción detallada</label>
+        <textarea id="fDescripcion" rows="4" placeholder="Explica la situación con el mayor detalle posible..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Enviar Reporte</button>
+      <p class="form-note">* Este formulario genera un correo de reporte. Los datos serán revisados por la administración.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="brand-icon">🌷</span>
+      <div>
+        <p class="footer-name">Torre Tulipán</p>
+        <p class="footer-complex">Conjunto Las Flores</p>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Comunidad Torre Tulipán. Información publicada con fines de transparencia comunitaria.</p>
+    <div class="footer-towers">
+      <span>Amapola</span><span class="dot">·</span><span>Gardenia</span><span class="dot">·</span><span>Tulipán</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
