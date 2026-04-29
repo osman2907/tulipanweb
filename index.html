@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Torre Tulipán - Problemáticas Residenciales</title>
+<meta name="description" content="Información vecinal del Conjunto Residencial Las Flores, Edificio Tulipán.">
+<title>Edificio Tulipán – Conjunto Residencial Las Flores</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -16,7 +17,7 @@
     <div class="nav-brand">
       <span class="brand-icon">🌷</span>
       <div>
-        <span class="brand-name">Torre Tulipán</span>
+        <span class="brand-name">Edificio Tulipán</span>
         <span class="brand-sub">Conjunto Las Flores</span>
       </div>
     </div>
@@ -24,28 +25,37 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="#problematicas" class="nav-link">Problemáticas</a></li>
-      <li><a href="#morosos" class="nav-link">Morosos</a></li>
-      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#salon-fiesta" class="nav-link">Salón de fiestas</a></li>
+      <li><a href="#basura" class="nav-link">Basura</a></li>
+      <li><a href="#horarios" class="nav-link">Horarios</a></li>
+      <li><a href="#mascotas" class="nav-link">Mascotas</a></li>
       <li><a href="#contacto" class="nav-link">Contacto</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="inicio">
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Transparencia y Comunidad</p>
-    <h1 class="hero-title">Torre Tulipán</h1>
-    <p class="hero-subtitle">Conjunto Residencial Las Flores</p>
-    <p class="hero-desc">Espacio informativo sobre las problemáticas de nuestra torre, del conjunto y de la comunidad con Las Brisas. Juntos construimos soluciones.</p>
-    <div class="hero-badges">
-      <span class="badge badge-tulipan">Torre Tulipán</span>
-      <span class="badge badge-flores">Las Flores</span>
-      <span class="badge badge-brisas">Las Brisas</span>
+  <div class="hero-content hero-grid">
+    <div>
+      <p class="hero-eyebrow">Comunidad Tulipán</p>
+      <h1 class="hero-title">Bienvenidos al Edificio Tulipan</h1>
+      <p class="hero-desc">Un espacio informativo para mantener a nuestros vecinos orientados sobre normas, horarios y recomendaciones de convivencia.</p>
+      <div class="hero-actions">
+        <a href="#horarios" class="btn-hero">Ver horarios</a>
+        <a href="#salon-fiesta" class="btn-hero btn-hero-secondary">Normas de convivencia</a>
+      </div>
     </div>
-    <a href="#problematicas" class="btn-hero">Ver Problemáticas</a>
+    <article class="hero-card">
+      <h2>Espacio vecinal claro y util</h2>
+      <ul>
+        <li>Normas faciles de consultar</li>
+        <li>Horarios y recomendaciones actualizadas</li>
+        <li>Canal directo con Junta de Condominio</li>
+      </ul>
+    </article>
   </div>
   <div class="hero-scroll-hint">
     <span>Desplázate</span>
@@ -53,144 +63,289 @@
   </div>
 </header>
 
-<!-- STATS -->
+<!-- STATS BAR -->
 <section class="stats-bar">
   <div class="stats-container">
     <div class="stat-item">
-      <span class="stat-number" id="countIssues">0</span>
-      <span class="stat-label">Problemáticas</span>
+      <span class="stat-number">$10</span>
+      <span class="stat-label">USD · Salón de fiestas</span>
     </div>
     <div class="stat-item">
-      <span class="stat-number" id="countMorosos">0</span>
-      <span class="stat-label">Morosos</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" id="countProyectos">0</span>
-      <span class="stat-label">Proyectos</span>
+      <span class="stat-number">Mar – Sáb</span>
+      <span class="stat-label">Días laborables</span>
     </div>
     <div class="stat-item">
       <span class="stat-number">3</span>
-      <span class="stat-label">Torres</span>
+      <span class="stat-label">Días fijos de agua</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">7am – 5pm</span>
+      <span class="stat-label">Jornada trabajador</span>
     </div>
   </div>
 </section>
 
-<!-- PROBLEMÁTICAS -->
-<section class="section" id="problematicas">
+<!-- SALÓN DE FIESTAS -->
+<section class="section" id="salon-fiesta">
   <div class="container">
     <div class="section-header">
-      <p class="section-eyebrow">Situación Actual</p>
-      <h2 class="section-title">Problemáticas Reportadas</h2>
-      <p class="section-desc">Filtra por alcance para ver las problemáticas de cada área de nuestra comunidad.</p>
+      <p class="section-eyebrow">Espacios Comunes</p>
+      <h2 class="section-title">Alquiler del Salón de Fiestas</h2>
+      <p class="section-desc">Normas para el uso del salon de fiestas del edificio.</p>
+      <button class="copy-section-btn" data-section="salon-fiesta" type="button">🔗 Copiar enlace de esta sección</button>
     </div>
-
-    <!-- FILTER TABS -->
-    <div class="filter-tabs">
-      <button class="filter-btn active" data-filter="all">Todas</button>
-      <button class="filter-btn" data-filter="tulipan">Torre Tulipán</button>
-      <button class="filter-btn" data-filter="flores">Conjunto Las Flores</button>
-      <button class="filter-btn" data-filter="brisas">Con Las Brisas</button>
+    <div class="content-card fade-up">
+      <ul class="rec-list rec-list-bullet">
+        <li><strong>Costo:</strong> 10 USD calculados a tasa BCV.</li>
+        <li>El propietario o residente debe estar al dia con el condominio.</li>
+        <li>El salon debe entregarse limpio.</li>
+        <li>Cualquier dano ocasionado debera ser cancelado por el propietario responsable.</li>
+      </ul>
+      <p class="content-note">El buen uso del salon permite que todos los vecinos puedan disfrutarlo en mejores condiciones.</p>
     </div>
-
-    <!-- ISSUES GRID -->
-    <div class="issues-grid" id="issuesGrid"></div>
   </div>
 </section>
 
-<!-- MOROSOS -->
-<section class="section section-alt" id="morosos">
+<!-- BASURA -->
+<section class="section" id="basura">
   <div class="container">
     <div class="section-header">
-      <p class="section-eyebrow">Transparencia Financiera</p>
-      <h2 class="section-title">Registro de Morosos</h2>
-      <p class="section-desc">Lista de propietarios o residentes con obligaciones pendientes de pago de administración.</p>
+      <p class="section-eyebrow">Limpieza y Convivencia</p>
+      <h2 class="section-title">Disposición de la Basura</h2>
+      <p class="section-desc">Mantengamos el edificio limpio siguiendo estas sencillas normas.</p>
+      <button class="copy-section-btn" data-section="basura" type="button">🔗 Copiar enlace de esta sección</button>
     </div>
-    <div class="morosos-info-bar">
-      <div class="info-pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        La información se publica con fines de transparencia comunitaria conforme al reglamento interno.
+    <div class="info-split fade-up">
+      <div class="info-split-main">
+        <h3>Disposición general</h3>
+        <div class="basura-alert">
+          <span class="basura-alert-icon">⚠️</span>
+          <div>
+            <p class="basura-alert-title">Basura que no va por el bajante</p>
+            <p>La basura <strong>voluminosa o que no pueda lanzarse por el bajante</strong> debe bajarse directamente a Planta Baja durante el horario de trabajo de <strong>Jhonathan Ford</strong> (martes a sábado, 7:00 a.m. – 5:00 p.m., con pausa de almuerzo de 12:00 p.m. a 2:00 p.m.). Si el trabajador no está disponible, también puede bajarse previa coordinación con la Junta de Condominio, procurando que no permanezca expuesta durante dos días.</p>
+          </div>
+        </div>
+      </div>
+      <div class="info-split-list">
+        <h3>Recomendaciones</h3>
+        <ul class="rec-list">
+          <li>Usar bolsas bien cerradas.</li>
+          <li>Evitar dejar basura en pasillos, escaleras o áreas comunes.</li>
+          <li>No sacar desechos fuera del horario o sin coordinación.</li>
+          <li>Consultar los horarios del trabajador en la sección <a href="#horarios" class="basura-link">Horarios</a>.</li>
+        </ul>
       </div>
     </div>
-    <div class="morosos-table-wrap">
-      <table class="morosos-table" id="morososTable">
-        <thead>
-          <tr>
-            <th>Apto / Unidad</th>
-            <th>Torre</th>
-            <th>Meses en mora</th>
-            <th>Valor aprox.</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody id="morososBody"></tbody>
-      </table>
-    </div>
   </div>
 </section>
 
-<!-- PROYECTOS -->
-<section class="section" id="proyectos">
+<!-- HORARIOS -->
+<section class="section section-alt" id="horarios">
   <div class="container">
     <div class="section-header">
-      <p class="section-eyebrow">Mejoras y Futuro</p>
-      <h2 class="section-title">Propuestas de Proyectos</h2>
-      <p class="section-desc">Iniciativas para mejorar la calidad de vida en nuestra comunidad.</p>
+      <p class="section-eyebrow">Servicios y Logística</p>
+      <h2 class="section-title">Horarios del Edificio</h2>
+      <p class="section-desc">Consulta todos los horarios clave para una mejor coordinación y convivencia en el edificio.</p>
+      <button class="copy-section-btn" data-section="horarios" type="button">🔗 Copiar enlace de esta sección</button>
     </div>
-    <div class="proyectos-grid" id="proyectosGrid"></div>
+
+    <!-- BLOQUE: TRABAJADOR RESIDENCIAL -->
+    <div class="schedule-block fade-up">
+      <div class="schedule-block-header sched-worker">
+        <span class="schedule-block-icon">👷</span>
+        <div>
+          <h3 class="schedule-block-title">Trabajador Residencial</h3>
+          <p class="schedule-block-sub">Responsable del mantenimiento y servicios del edificio</p>
+        </div>
+      </div>
+      <div class="schedule-block-body">
+        <div class="worker-profile">
+          <div class="worker-name-badge">
+            <div class="worker-avatar">JF</div>
+            <div>
+              <p class="worker-name">Jhonathan Ford</p>
+              <p class="worker-role">Trabajador Residencial · Edificio Tulipán</p>
+            </div>
+          </div>
+          <div class="worker-days-wrap">
+            <p class="worker-days-text">Trabaja de <strong>martes a sábado</strong>. Los domingos y lunes son sus días de descanso.</p>
+            <div class="worker-days-row">
+              <span class="wday wday-active">Mar</span>
+              <span class="wday wday-active">Mié</span>
+              <span class="wday wday-active">Jue</span>
+              <span class="wday wday-active">Vie</span>
+              <span class="wday wday-active">Sáb</span>
+              <span class="wday wday-off">Dom</span>
+              <span class="wday wday-off">Lun</span>
+            </div>
+          </div>
+        </div>
+        <div class="worker-schedule">
+          <div class="ws-slot ws-work">
+            <div class="ws-icon">☀️</div>
+            <div class="ws-info">
+              <p class="ws-range">7:00 a.m. – 12:00 p.m.</p>
+              <p class="ws-label">Turno Mañana</p>
+            </div>
+            <div class="ws-badge ws-badge-work">5 h</div>
+          </div>
+          <div class="ws-slot ws-lunch">
+            <div class="ws-icon">🍽️</div>
+            <div class="ws-info">
+              <p class="ws-range">12:00 p.m. – 2:00 p.m.</p>
+              <p class="ws-label">Almuerzo</p>
+            </div>
+            <div class="ws-badge ws-badge-lunch">2 h</div>
+          </div>
+          <div class="ws-slot ws-work">
+            <div class="ws-icon">🌤️</div>
+            <div class="ws-info">
+              <p class="ws-range">2:00 p.m. – 5:00 p.m.</p>
+              <p class="ws-label">Turno Tarde</p>
+            </div>
+            <div class="ws-badge ws-badge-work">3 h</div>
+          </div>
+        </div>
+        <div class="worker-important">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" flex-shrink="0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p>La basura que <strong>no puede lanzarse por el bajante</strong> debe bajarse directamente a <strong>Planta Baja</strong>, preferiblemente dentro del horario laboral de Jhonathan Ford. Si el trabajador está libre, puede realizarse la gestión con coordinación previa de la Junta de Condominio para evitar que la basura quede expuesta por dos días.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE: MUDANZAS -->
+    <div class="schedule-block fade-up">
+      <div class="schedule-block-header sched-mudanzas">
+        <span class="schedule-block-icon">🚚</span>
+        <div>
+          <h3 class="schedule-block-title">Horario para Mudanzas</h3>
+          <p class="schedule-block-sub">Coordina con anticipación para evitar inconvenientes</p>
+        </div>
+      </div>
+      <div class="schedule-block-body">
+        <div class="mudanzas-grid">
+          <div class="mudanza-item">
+            <p class="mudanza-label">Días permitidos</p>
+            <p class="mudanza-value">Martes a Sábado</p>
+          </div>
+          <div class="mudanza-item">
+            <p class="mudanza-label">Horario matutino</p>
+            <p class="mudanza-value">9:00 a.m. – 12:00 p.m.</p>
+          </div>
+          <div class="mudanza-item">
+            <p class="mudanza-label">Horario vespertino</p>
+            <p class="mudanza-value">2:00 p.m. – 5:00 p.m.</p>
+          </div>
+          <div class="mudanza-item mudanza-rec">
+            <p class="mudanza-label">Recomendación</p>
+            <p class="mudanza-value">Coordinar previamente con la Junta de Condominio para evitar inconvenientes con vecinos, ascensores o áreas comunes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE: HORARIO DEL AGUA -->
+    <div class="schedule-block fade-up">
+      <div class="schedule-block-header sched-agua">
+        <span class="schedule-block-icon">💧</span>
+        <div>
+          <h3 class="schedule-block-title">Horario del Agua</h3>
+          <p class="schedule-block-sub">Sujeto al suministro de Hidroven</p>
+        </div>
+      </div>
+      <div class="schedule-block-body">
+        <div class="water-grid">
+          <article class="water-card">
+            <span class="issue-scope scope-tulipan">Horario fijo</span>
+            <div class="water-icon">💧</div>
+            <h3 class="water-day">Martes</h3>
+            <p class="water-time">7:00 p.m. a 8:30 p.m.</p>
+          </article>
+          <article class="water-card">
+            <span class="issue-scope scope-tulipan">Horario fijo</span>
+            <div class="water-icon">💧</div>
+            <h3 class="water-day">Miércoles</h3>
+            <p class="water-time">7:00 p.m. a 8:30 p.m.</p>
+          </article>
+          <article class="water-card">
+            <span class="issue-scope scope-tulipan">Horario fijo</span>
+            <div class="water-icon">💧</div>
+            <h3 class="water-day">Jueves</h3>
+            <p class="water-time">7:00 p.m. a 8:30 p.m.</p>
+          </article>
+          <article class="water-card">
+            <span class="issue-scope scope-flores">Depende Hidroven</span>
+            <div class="water-icon">🌊</div>
+            <h3 class="water-day">Sábado</h3>
+            <p class="water-time">Depende del ingreso de agua por parte de Hidroven.</p>
+          </article>
+          <article class="water-card">
+            <span class="issue-scope scope-flores">Depende Hidroven</span>
+            <div class="water-icon">🌊</div>
+            <h3 class="water-day">Domingo</h3>
+            <p class="water-time">Depende del ingreso de agua por parte de Hidroven.</p>
+          </article>
+          <article class="water-card">
+            <span class="issue-scope scope-flores">Depende Hidroven</span>
+            <div class="water-icon">🌊</div>
+            <h3 class="water-day">Lunes</h3>
+            <p class="water-time">Depende del ingreso de agua por parte de Hidroven.</p>
+          </article>
+        </div>
+        <div class="content-card" style="margin-top:1.2rem">
+          <p>Los horarios pueden variar según el suministro recibido por parte de Hidroven.</p>
+          <ul class="rec-list rec-list-bullet">
+            <li>Hacer uso responsable del agua.</li>
+            <li>Revisar llaves, flotantes y posibles fugas.</li>
+            <li>Evitar dejar grifos abiertos durante el llenado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- MASCOTAS -->
+<section class="section" id="mascotas">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Convivencia</p>
+      <h2 class="section-title">Buen uso de las areas comunes con mascotas</h2>
+      <p class="section-desc">Normas para una convivencia responsable con todos los vecinos.</p>
+      <button class="copy-section-btn" data-section="mascotas" type="button">🔗 Copiar enlace de esta sección</button>
+    </div>
+    <div class="content-card fade-up">
+      <ul class="rec-list rec-list-bullet">
+        <li>Bajar a las mascotas con correa.</li>
+        <li>Recoger siempre sus desechos.</li>
+        <li>Evitar que las mascotas danen jardines, paredes, puertas o areas comunes.</li>
+        <li>Procurar que no molesten a otros vecinos.</li>
+        <li>No dejar bolsas, restos o desperdicios en las areas comunes.</li>
+        <li>Usar las areas de forma responsable para mantener limpio y agradable el edificio.</li>
+      </ul>
+      <p class="content-note">Una mascota bien cuidada tambien habla bien de su hogar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO / JUNTA -->
 <section class="section section-alt" id="contacto">
   <div class="container">
     <div class="section-header">
-      <p class="section-eyebrow">Participación Ciudadana</p>
-      <h2 class="section-title">Reporta una Problemática</h2>
-      <p class="section-desc">¿Detectaste un problema que no está aquí? Repórtalo para que la comunidad esté informada.</p>
+      <p class="section-eyebrow">Comunicación</p>
+      <h2 class="section-title">Junta de Condominio</h2>
+      <p class="section-desc">Para solicitudes, coordinaciones o reportes relacionados con el edificio, comunícate con la Junta de Condominio.</p>
+      <button class="copy-section-btn" data-section="contacto" type="button">🔗 Copiar enlace de esta sección</button>
     </div>
-    <form class="contact-form" id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fNombre">Tu nombre</label>
-          <input type="text" id="fNombre" placeholder="Nombre y apellido">
-        </div>
-        <div class="form-group">
-          <label for="fApto">Apartamento</label>
-          <input type="text" id="fApto" placeholder="Ej: 301">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fTorre">Torre</label>
-          <select id="fTorre">
-            <option value="">Seleccionar...</option>
-            <option value="tulipan">Tulipán</option>
-            <option value="amapola">Amapola</option>
-            <option value="gardenia">Gardenia</option>
-            <option value="brisas">Las Brisas</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="fAlcance">Alcance</label>
-          <select id="fAlcance">
-            <option value="">Seleccionar...</option>
-            <option value="tulipan">Solo Tulipán</option>
-            <option value="flores">Todo Las Flores</option>
-            <option value="brisas">Con Las Brisas</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group full">
-        <label for="fTitulo">Título de la problemática</label>
-        <input type="text" id="fTitulo" placeholder="Describe brevemente el problema">
-      </div>
-      <div class="form-group full">
-        <label for="fDescripcion">Descripción detallada</label>
-        <textarea id="fDescripcion" rows="4" placeholder="Explica la situación con el mayor detalle posible..."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Enviar Reporte</button>
-      <p class="form-note">* Este formulario genera un correo de reporte. Los datos serán revisados por la administración.</p>
-    </form>
+    <div class="content-card fade-up">
+      <ul class="rec-list rec-list-bullet">
+        <li><strong>Nombre de contacto:</strong> Por definir</li>
+        <li><strong>Telefono:</strong> Por definir</li>
+        <li><strong>Correo:</strong> Por definir</li>
+        <li><strong>Grupo de WhatsApp:</strong> Por definir</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -200,24 +355,15 @@
     <div class="footer-brand">
       <span class="brand-icon">🌷</span>
       <div>
-        <p class="footer-name">Torre Tulipán</p>
-        <p class="footer-complex">Conjunto Las Flores</p>
+        <p class="footer-name">Edificio Tulipán</p>
+        <p class="footer-complex">Conjunto Residencial Las Flores</p>
       </div>
     </div>
-    <p class="footer-copy">&copy; <span id="year"></span> Comunidad Torre Tulipán. Información publicada con fines de transparencia comunitaria.</p>
-    <div class="footer-towers">
-      <span>Amapola</span><span class="dot">·</span><span>Gardenia</span><span class="dot">·</span><span>Tulipán</span>
-    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Comunidad Edificio Tulipán. Información para una mejor convivencia vecinal.</p>
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modal">
-    <button class="modal-close" id="modalClose">&times;</button>
-    <div class="modal-content" id="modalContent"></div>
-  </div>
-</div>
+<div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
 <script src="app.js"></script>
 </body>
