@@ -891,6 +891,88 @@ body {
 }
 .worker-important svg { color: #7c3aed; margin-top: .15rem; flex-shrink: 0; }
 
+/* ===== ADMINISTRADORA ===== */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.admin-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  padding: 1.6rem;
+}
+.admin-card-highlight {
+  background: linear-gradient(160deg, #f8faff 0%, #f5f3ff 100%);
+  border-color: #ddd6fe;
+}
+.admin-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--neutral-900);
+  margin-bottom: .65rem;
+}
+.admin-card-text {
+  color: var(--neutral-700);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.admin-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+.admin-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+.admin-list a {
+  color: var(--tulipan);
+  font-weight: 600;
+  text-decoration: none;
+}
+.admin-list a:hover {
+  text-decoration: underline;
+}
+.admin-icon {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+.admin-wa-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff !important;
+  padding: .38rem .78rem;
+  border-radius: 999px;
+  margin-top: .2rem;
+  box-shadow: 0 6px 16px rgba(5,150,105,.28);
+}
+.admin-wa-link:hover {
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+.admin-step-box {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-left: 4px solid #0284c7;
+  border-radius: 12px;
+  padding: .95rem 1rem;
+}
+.admin-step-box p {
+  color: var(--neutral-700);
+  line-height: 1.65;
+  margin-bottom: .6rem;
+}
+.admin-step-box p:last-child { margin-bottom: 0; }
+
 /* --- Mudanzas grid --- */
 .mudanzas-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -911,6 +993,7 @@ body {
 @media (max-width: 768px) {
   .worker-schedule   { grid-template-columns: 1fr; }
   .mudanzas-grid     { grid-template-columns: 1fr 1fr; }
+  .admin-grid        { grid-template-columns: 1fr; }
   .schedule-block-header { padding: 1rem 1.1rem; }
   .schedule-block-body   { padding: 1rem 1.1rem; }
 }
